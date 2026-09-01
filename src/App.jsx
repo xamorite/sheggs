@@ -1,0 +1,49 @@
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+import { lazy, Suspense } from 'react'
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
+const Works = lazy(()=>import('./pages/Works.jsx'))
+
+export default function App() {
+  const { pathname } = useLocation()
+  useEffect(() => window.scrollTo(0, 0), [pathname])
+
+  // reveal: force visible immediately + IO, veil removed above
+  useEffect(() => {
+    const revealAll = () => document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => el.classList.add('is-in'))
+    // immediate + fallback
+    revealAll()
+    const t1 = setTimeout(revealAll, 100)
+    const t2 = setTimeout(revealAll, 600)
+    const els = document.querySelectorAll('.reveal, .reveal-stagger')
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target) } })
+      }, { threshold: .05, rootMargin: '0px 0px 0px 0px' })
+      els.forEach(el => io.observe(el))
+      return () => { clearTimeout(t1); clearTimeout(t2); io.disconnect() }
+    }
+    return () => { clearTimeout(t1); clearTimeout(t2) }
+  }, [pathname])
+
+  return (
+    <>
+      <div className="cursor-ring" aria-hidden="true"></div>
+      <Header />
+      <Suspense fallback={<div style={{padding:'80px',textAlign:'center'}}>Loading works…</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Works />} />
+          <Route path="/portfolio" element={<Works />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Suspense>
+      <Footer />
+    </>
+  )
+}
