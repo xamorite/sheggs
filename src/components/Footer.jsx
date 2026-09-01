@@ -20,7 +20,8 @@ export default function Footer(){
             <h4>Contact</h4>
             <ul>
               <li><a href="mailto:sheqqs06@gmail.com">sheqqs06@gmail.com</a></li>
-              <li><a href="tel:+2349075235165">090 7523 5165</a></li>
+              <li><a href="tel:+2349075235165">Call: 090 7523 5165</a></li>
+              <li><a href="https://wa.me/2348039697731" target="_blank" rel="noopener">WhatsApp: 080 3969 7731</a></li>
               <li><a href="/contact">Booking enquiry →</a></li>
             </ul>
           </div>

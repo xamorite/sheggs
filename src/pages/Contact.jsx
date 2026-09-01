@@ -21,7 +21,8 @@ export default function Contact(){
             <div className="reveal is-in">
               <div className="contact-info">
                 <div className="item"><span className="eyebrow">Email</span><b>Say hello</b><a href="mailto:sheqqs06@gmail.com">sheqqs06@gmail.com</a></div>
-                <div className="item"><span className="eyebrow">Phone / WhatsApp</span><b>Call or message</b><a href="https://wa.me/2349075235165" target="_blank" rel="noopener">090 7523 5165</a></div>
+                <div className="item"><span className="eyebrow">Direct Call</span><b>Phone</b><a href="tel:+2349075235165">090 7523 5165</a></div>
+                <div className="item"><span className="eyebrow">WhatsApp</span><b>Chat with Sheqqs</b><a href="https://wa.me/2348039697731" target="_blank" rel="noopener">080 3969 7731</a></div>
                 <div className="item"><span className="eyebrow">Studio</span><b>Based in Nigeria</b><p>Available worldwide — travel quoted separately.</p></div>
               </div>
             </div>
