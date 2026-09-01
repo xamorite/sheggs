@@ -203,12 +203,21 @@ p{ margin:0; }
   clip-path:circle(150% at 50% 50%);
   pointer-events:none;
   transition:clip-path 1.2s var(--ease-soft), opacity .9s var(--ease-soft);
+  animation:iris-veil-fallback 1s 1s cubic-bezier(.16,.84,.44,1) forwards;
 }
 .iris-veil.loading{ pointer-events:all; }
 .iris-veil:not(.loading){
   clip-path:circle(0% at 50% 50%);
   opacity:0;
   pointer-events:none;
+}
+@keyframes iris-veil-fallback {
+  to {
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
 }
 .iris-mark{ width:64px; height:64px; opacity:.9; }
 .iris-mark svg{ width:100%; height:100%; }

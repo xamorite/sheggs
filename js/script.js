@@ -4,9 +4,18 @@ const init = () => {
   /* ---------- iris page-load veil ---------- */
   const veil = document.querySelector('.iris-veil');
   if (veil){
-    requestAnimationFrame(() => {
-      setTimeout(() => veil.classList.remove('loading'), 150);
-    });
+    const dismissVeil = () => {
+      veil.classList.remove('loading');
+      setTimeout(() => {
+        veil.style.display = 'none';
+      }, 1200);
+    };
+    if (document.readyState === 'complete') {
+      dismissVeil();
+    } else {
+      window.addEventListener('load', dismissVeil);
+      setTimeout(dismissVeil, 400);
+    }
   }
 
   /* ---------- header scroll state ---------- */

@@ -1,0 +1,21 @@
+{
+  "name": "Sheqqs Visuals",
+  "short_name": "Sheqqs",
+  "description": "Cinematographer, Photographer & Equipment Rentals based in Nigeria.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0b0a",
+  "theme_color": "#0b0b0a",
+  "icons": [
+    {
+      "src": "/assets/stranparentimage.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/stranparentimage.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
