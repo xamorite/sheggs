@@ -9,7 +9,7 @@ export default function About(){
       <section>
         <div className="wrap">
           <div className="split reveal is-in">
-            <div className="split-media"><div className="ring"></div><div className="ph tone-4"><img src="/assets/images/IMG_6499.JPG" alt="Sheqqs" loading="lazy" style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover'}}/></div></div>
+            <div className="split-media"><div className="ring"></div><div className="ph tone-4"><img src="/assets/images/IMG_6499.JPG" alt="Sheqqs" loading="lazy" decoding="async" style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover'}}/></div></div>
             <div>
               <span className="eyebrow">Cinematographer · Photographer · Equipment Rentals</span>
               <p className="pull-quote mt-lg">I don’t just capture moments — I create visual experiences.</p>

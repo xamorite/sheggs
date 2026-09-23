@@ -161,31 +161,31 @@
 
     <div class="grid-work reveal-stagger">
       <article class="work-card">
-        <div class="ph tone-1"><img src="assets/images/celebrity/IMG_6023.JPG" alt="Davido — Portrait" loading="lazy"></div>
+        <div class="ph tone-1"><img src="assets/images/celebrity/IMG_6023.JPG" alt="Davido — Portrait" loading="lazy" decoding="async"></div>
         <span class="idx">01 — Davido · Portrait</span>
         <div class="cap"><h3>Davido, Lagos</h3><span class="meta">f/1.8 · 1/400s<br>ISO 200</span></div>
       </article>
 
       <article class="work-card">
-        <div class="ph tone-4"><img src="assets/images/celebrity/IMG_6029.JPG" alt="Davido — Performance" loading="lazy"></div>
+        <div class="ph tone-4"><img src="assets/images/celebrity/IMG_6029.JPG" alt="Davido — Performance" loading="lazy" decoding="async"></div>
         <span class="idx">02 — Davido · Live</span>
         <div class="cap"><h3>Davido, Stage</h3><span class="meta">f/2.8 · 1/250s<br>ISO 400</span></div>
       </article>
 
       <article class="work-card">
-        <div class="ph tone-3"><img src="assets/images/celebrity/IMG_6030.JPG" alt="Davido — Wide" loading="lazy"></div>
+        <div class="ph tone-3"><img src="assets/images/celebrity/IMG_6030.JPG" alt="Davido — Wide" loading="lazy" decoding="async"></div>
         <span class="idx">03 — Davido · Wide</span>
         <div class="cap"><h3>Davido — Wide Frame</h3><span class="meta">f/4 · 1/1000s<br>ISO 800</span></div>
       </article>
 
       <article class="work-card">
-        <div class="ph tone-5"><img src="assets/images/zombie/IMG_5709.JPG" alt="Zombie — Editorial" loading="lazy"></div>
+        <div class="ph tone-5"><img src="assets/images/zombie/IMG_5709.JPG" alt="Zombie — Editorial" loading="lazy" decoding="async"></div>
         <span class="idx">04 — Zombie</span>
         <div class="cap"><h3>Zombie, On Set</h3><span class="meta">f/2 · 1/320s<br>ISO 100</span></div>
       </article>
 
       <article class="work-card">
-        <div class="ph tone-2"><img src="assets/images/zombie/IMG_5728.JPG" alt="Zombie — Portrait" loading="lazy"></div>
+        <div class="ph tone-2"><img src="assets/images/zombie/IMG_5728.JPG" alt="Zombie — Portrait" loading="lazy" decoding="async"></div>
         <span class="idx">05 — Zombie</span>
         <div class="cap"><h3>Zombie Portrait</h3><span class="meta">f/1.4 · 1/200s<br>ISO 320</span></div>
       </article>
@@ -212,30 +212,14 @@
     <div class="grid-work reveal-stagger">
       <article class="work-card video-card wide">
         <div class="ph tone-2" style="padding:0; background:#000">
-          <video src="assets/videos/noones.mp4" controls playsinline preload="metadata"></video>
+          <button class="yt" type="button" data-yt="iXvSzygGSto" aria-label="Play video" style="background-image:url(https://i.ytimg.com/vi/iXvSzygGSto/maxresdefault.jpg),url(https://i.ytimg.com/vi/iXvSzygGSto/hqdefault.jpg)"><span>&#9654;</span></button>
         </div>
-        <span class="idx">01 — Commercial Project</span>
-        <div class="cap"><h3>Noones Cinematography</h3><span class="meta">Commercial · 2024</span></div>
-      </article>
-
-      <article class="work-card video-card">
-        <div class="ph tone-3" style="padding:0; background:#000">
-          <video src="assets/videos/chocomalt.MP4" controls playsinline preload="metadata"></video>
-        </div>
-        <span class="idx">02 — Commercial</span>
-        <div class="cap"><h3>Chocomalt</h3><span class="meta">Commercial · 2024</span></div>
-      </article>
-
-      <article class="work-card video-card">
-        <div class="ph tone-4" style="padding:0; background:#000">
-          <video src="assets/videos/komando.mp4" controls playsinline preload="metadata"></video>
-        </div>
-        <span class="idx">03 — Music Video</span>
-        <div class="cap"><h3>Komando</h3><span class="meta">Music Video · 2024</span></div>
+        <span class="idx">01 — Featured Film</span>
+        <div class="cap"><h3>Sheqqs Cinematography</h3><span class="meta">Showreel</span></div>
       </article>
     </div>
 
-    <p class="meta reveal" style="margin-top:18px; opacity:.7">Add more videos to <code>assets/videos/</code> — duplicate a <code>work-card</code> above and change the <code>src</code>.</p>
+    <p class="meta reveal" style="margin-top:18px; opacity:.7">To add a video, duplicate a <code>work-card</code> above and change its <code>data-yt</code> YouTube ID.</p>
   </div>
 </section>
 
@@ -246,7 +230,7 @@
     <div class="split">
       <div class="split-media reveal">
         <div class="ring"></div>
-        <div class="ph tone-3"><img src="assets/images/photoshoot/IMG_9596.JPG" alt="Sheqqs — Cinematographer" loading="lazy"></div>
+        <div class="ph tone-3"><img src="assets/images/photoshoot/IMG_9596.JPG" alt="Sheqqs — Cinematographer" loading="lazy" decoding="async"></div>
       </div>
       <div class="reveal">
         <span class="eyebrow">About Me</span>
@@ -301,7 +285,7 @@
     <div class="split reverse reveal" style="align-items:center; border-top:1px solid var(--line); padding-top:100px">
       <div class="split-media">
         <div class="ring"></div>
-        <div class="ph tone-5"><img src="assets/images/photoshoot/IMG_4821.JPG" alt="Book a session — Sheqqs" loading="lazy"></div>
+        <div class="ph tone-5"><img src="assets/images/photoshoot/IMG_4821.JPG" alt="Book a session — Sheqqs" loading="lazy" decoding="async"></div>
       </div>
       <div>
         <span class="eyebrow">Availability — 2026</span>
@@ -355,6 +339,11 @@
   </div>
 </footer>
 
+<script>
+document.addEventListener('click',function(e){var b=e.target.closest('.yt');if(!b)return;
+var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.yt+'?autoplay=1&rel=0&vq=hd1080&hd=1&modestbranding=1';
+f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='Video';b.replaceWith(f);});
+</script>
 <script type="module" src="/js/script.js"></script>
 </body>
 </html>

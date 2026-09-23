@@ -64,7 +64,7 @@ export default function Works(){
                   {type==='video' ? (
                     <video src={url} controls playsInline preload="metadata" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover'}} />
                   ) : (
-                    <img src={url} alt={path.split('/').pop()} loading="lazy" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover'}} />
+                    <img src={url} alt={path.split('/').pop()} loading="lazy" decoding="async" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover'}} />
                   )}
                 </div>
               </div>
